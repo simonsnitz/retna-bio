@@ -2,6 +2,13 @@ import React from 'react';
 
 import Box from '@mui/material/Box';
 
+import Home from './Components/Home';
+import What from './Components/What';
+import Why from './Components/Why';
+import Who from './Components/Who';
+import Do from './Components/Do';
+import Contact from './Components/Contact';
+
 
 function App() {
   return (
@@ -14,7 +21,12 @@ function App() {
   >
     <Box gridColumn="span 12">
 
-      <h1>Retna Bio</h1>
+      <Home/>
+      <What/>
+      <Why/>
+      <Who/>
+      <Do/>
+      <Contact/>
 
     </Box>
   </Box>
