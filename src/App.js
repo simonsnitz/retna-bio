@@ -17,7 +17,7 @@ function App() {
     display="grid"
     gridTemplateColumns="repeat(12, 1fr)"
     gridAutoRows="auto"
-    sx={{ height: '100%' }}
+    sx={{ height: '100%'}}
   >
     <Box gridColumn="span 12">
 
