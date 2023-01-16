@@ -13,7 +13,7 @@ export default function Home() {
 
   gsap.registerPlugin(ScrollTrigger);
 
-  const geneticSensors = "#geneticSensors";
+
 
   useEffect(() => {
 
