@@ -32,7 +32,7 @@ export default function What() {
     },
     )
 
-    if (matches == false){
+    if (matches === false){
     gsap.to("#bubble", 
       {width:"300px",
        height:"300px",
