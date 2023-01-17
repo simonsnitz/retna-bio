@@ -13,7 +13,7 @@ export default function Home() {
 
   gsap.registerPlugin(ScrollTrigger);
 
-  const geneticSensors = "#geneticSensors";
+
 
   useEffect(() => {
 
@@ -58,7 +58,7 @@ export default function Home() {
         sx={{ fontSize: { xs: 40, md: 70 }, mt: '5%' }}
         component="div"
       >
-        We accelerate screening workflows with
+        We accelerate screening workflows by leveraging
       </Typography>
       <Typography id="geneticSensors" textAlign="center"
         sx={{ fontSize: { xs: 40, md: 70 }, position:"fixed", left:"50%", translate:"-50%" }}
