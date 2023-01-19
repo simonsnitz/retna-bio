@@ -129,12 +129,12 @@ export default function What() {
 
 
 
-    <Grid item xs={10} sm={5} id="bubbleText1" style={{opacity:"0%"}}
+    <Grid item xs={10} sm={5} id="bubbleText1"
       sx={{ 
         position:{xs:"fixed", sm:"relative"},
         top:{xs:"60vh"},
         width:{xs:"90vw"},
-        opacity:"0%"
+        opacity:{xs:"0%", sm:"100%"}
       }}>
 
       <Typography textAlign="center" 
