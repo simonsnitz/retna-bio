@@ -32,12 +32,12 @@ export default function What() {
     },
     )
 
-    if (matches == false){
+    if (matches === false){
     gsap.to("#bubble", 
-      {width:"300px",
-       height:"300px",
-       translateX:"-150px",
-       translateY:"-150px",
+      {width:"90vw",
+       height:"90vw",
+       translateX:"-45vw",
+       translateY:"-45vw",
         scrollTrigger: {
           trigger: "#startExpand",
           scrub: true,
@@ -48,10 +48,10 @@ export default function What() {
       )
     } else {
       gsap.to("#bubble", 
-      {width:"600px",
-       height:"600px",
-       translateX:"-300px",
-       translateY:"-300px",
+      {width:"42vw",
+       height:"42vw",
+       translateX:"-21vw",
+       translateY:"-21vw",
         scrollTrigger: {
           trigger: "#startExpand",
           scrub: true,
@@ -62,8 +62,34 @@ export default function What() {
       )
     }
 
+    if (matches === false){
+      gsap.fromTo("#bubbleText1", 
+      {opacity:"0%"},  
+      {opacity:"100%",
+          scrollTrigger: {
+            trigger: "#bubbleText1Appear",
+            scrub: true,
+            start:"top center",
+            end:"+=20%"
+          }
+        },
+        )
+      } 
+    if (matches === false){
+      gsap.to("#bubbleText1", 
+        {opacity:"0%",
+          scrollTrigger: {
+            trigger: "#bubbleText1Disappear",
+            scrub: true,
+            start:"top center",
+            // end:"+=20%"
+          }
+        },
+        )
+      } 
+
   
-  }, []);
+  }, [matches]);
 
 
 
@@ -79,17 +105,17 @@ export default function What() {
     >
 
       {/* Markers */}
-    <div id="startFadeIn" style={{position:"absolute", top:"130vh", left:"90vw"}}>Start fade-in</div>
-    <div id="endFadeIn" style={{position:"absolute", top:"155vh", left:"90vw"}}>End fade-in</div>
-    <div id="startExpand" style={{position:"absolute", top:"160vh", left:"90vw"}}>Start expand</div>
-    <div id="endExpand" style={{position:"absolute", top:"190vh", left:"90vw"}}>End expand</div>
+    <Box id="startFadeIn" sx={{position:"absolute", top:{xs:"155vh",sm:"130vh"}, left:"90vw"}}>Start fade-in</Box>
+    <Box id="endFadeIn" sx={{position:"absolute", top:{xs:"180vh",sm:"155vh"}, left:"90vw"}}>End fade-in</Box>
+    <Box id="startExpand" sx={{position:"absolute", top:{xs:"190vh",sm:"160vh"}, left:"90vw"}}>Start expand</Box>
+    <Box id="endExpand" sx={{position:"absolute", top:{xs:"210vh",sm:"180vh"}, left:"90vw"}}>End expand</Box>
 
 
 
 
     <Box id="bubble" sx={{
-        left:{xs:"50%", sm:"75%"}, 
-        top:"50%", 
+        left:{xs:"48%", sm:"75%"}, 
+        top:{xs:"30%", sm:"50%"}, 
         borderRadius: "50%", 
         border: "4px solid black", 
         position:"fixed",
@@ -98,22 +124,34 @@ export default function What() {
     ></Box>
 
 
+    <Box id="bubbleText1Appear" sx={{position:"absolute", top:{xs:"220vh",sm:"220vh"}, left:"90vw"}}>Bubble text 1</Box>
+    <Box id="bubbleText1Disappear" sx={{position:"absolute", top:{xs:"270vh",sm:"270vh"}, left:"90vw"}}>Bubble text 1</Box>
 
 
-    <Grid item xs={5} mt={'20vh'}>
-      <Typography textAlign="center" id="what"
-        sx={{ fontSize: { xs: 40, md: 70 }, mb: 1, mt: '5%' }}
+
+    <Grid item xs={10} sm={5} id="bubbleText1" style={{opacity:"0%"}}
+      sx={{ 
+        position:{xs:"fixed", sm:"relative"},
+        top:{xs:"60vh"},
+        width:{xs:"90vw"},
+        opacity:"0%"
+      }}>
+
+      <Typography textAlign="center" 
+        sx={{ fontSize: { xs: 40, md: 70 }, 
+      }}
         component="div"
       >
           Nature's way of measuring chemicals.
       </Typography>
 
-
-
       </Grid>
 
-      <Grid item xs={6} mt={'20vh'}>
 
+
+
+
+      <Grid item xs={6} mt={'20vh'}>
 
       </Grid>
 
