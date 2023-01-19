@@ -15,16 +15,13 @@ export default function BeadsAnimation({name, speed, delay}) {
     beadNames.push(`${name}`+i.toString());
   }
 
-  // const beads1 = ["bead1", "bead2", "bead3", "bead4", "bead5", "bead6", "bead7", "bead8", "bead9", "bead10"];
-
-  // const beads = ["#bead1", "#bead2", "#bead3", "#bead4", "#bead5", "#bead6", "#bead7", "#bead8", "#bead9", "#bead10"];
 
   useEffect(() => { 
 
     var stag = 0;
 
     beadIDs.forEach((bead, i) =>{
-      gsap.fromTo(bead, {x:0}, {x:"97vw", duration:speed, ease:'none', delay:stag, repeat:-1});   
+      gsap.fromTo(bead, {x:0}, {x:"100vw", duration:speed, ease:'none', delay:stag, repeat:-1});   
       stag += delay;
     })
 
@@ -32,11 +29,11 @@ export default function BeadsAnimation({name, speed, delay}) {
 
   return (
     
-    <Box ml={"-15vw"}>
+    <Box sx={{ml:{xs:"-15vw",sm:"-10vw"}}}>
 
-      {beadNames.map((item) => (
+      {beadNames.map((item, i) => (
 
-        <div id={item} style={{width: 20, height:20, borderRadius: "50%", border: "4px solid black", position:"absolute"}}></div>
+        <Box id={item} key={i} sx={{width: 20, height:20, borderRadius: "50%", border: {xs:"3px solid black",sm:"4px solid black"}, position:"absolute"}}></Box>
       
       ))}
 
