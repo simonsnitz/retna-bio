@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import '../index.css';
 
 import { Grid, Typography, Box } from '@mui/material/';
 import BeadsAnimation from './BeadsAnimation';
@@ -17,9 +18,9 @@ export default function Home() {
 
   useEffect(() => {
 
-    gsap.fromTo("#geneticSensors", 
-      {opacity:"100%"},
-      {opacity:"0%", 
+    gsap.fromTo("#naturesWay", 
+      {opacity:"0%"},
+      {opacity:"100%", 
         scrollTrigger: {
           trigger: "#geneticSensorFadeMarker",
           scrub: true,
@@ -27,6 +28,8 @@ export default function Home() {
         }
       },
       )
+
+
 
   
   }, []);
@@ -62,18 +65,25 @@ export default function Home() {
         sx={{ fontSize: { xs: 35, md: 70 }, mt: '5%' }}
         component="div"
       >
-        We accelerate screening workflows by leveraging
+        We accelerate screening workflows with genetic sensors
       </Typography>
-      <Typography id="geneticSensors" textAlign="center"
-        sx={{ fontSize: { xs: 35, md: 70 }, position:"fixed", left:"50%", translate:"-50%" }}
+
+    </Grid>
+
+    <Grid item xs={11} sx={{mt:{xs:'40vh', sm:'40vh'}}}>
+      <Typography id="naturesWay" textAlign="center"
+        sx={{ fontSize: { xs: 35, md: 70 },
+        background:"linear-gradient(to right, #00ff55, #00ffea)",
+        WebkitBackgroundClip: "text",
+        WebkitTextFillColor: "transparent"
+        }}
         component="div">
-      genetic sensors
+      Nature's way of measuring chemicals
       </Typography>
+    </Grid>
 
-      </Grid>
 
-
-      <Grid item xs={10} sx={{mt:{xs:80, sm:50}}}>
+      <Grid item xs={10} sx={{mt:{xs:0, sm:0}}}>
         <BeadsAnimation speed={10} delay={1} name={"slow_beads"}/>
       </Grid>
       <Grid item xs={10} sx={{mt:{xs:0, sm:-5}}}>

@@ -64,6 +64,19 @@ export default function What() {
 
     if (matches === false){
       gsap.fromTo("#bubbleText1", 
+      {opacity:"100%"},
+      {opacity:"0%",
+          scrollTrigger: {
+            trigger: "#bubbleText1Disappear",
+            scrub: true,
+            start:"top center",
+            end:"+=20%"
+          }
+        },
+        )
+      } 
+    if (matches === false){
+      gsap.fromTo("#bubbleText1", 
       {opacity:"0%"},  
       {opacity:"100%",
           scrollTrigger: {
@@ -75,18 +88,7 @@ export default function What() {
         },
         )
       } 
-    if (matches === false){
-      gsap.to("#bubbleText1", 
-        {opacity:"0%",
-          scrollTrigger: {
-            trigger: "#bubbleText1Disappear",
-            scrub: true,
-            start:"top center",
-            // end:"+=20%"
-          }
-        },
-        )
-      } 
+
 
   
   }, [matches]);
@@ -125,11 +127,11 @@ export default function What() {
 
 
     <Box id="bubbleText1Appear" sx={{position:"absolute", top:{xs:"220vh",sm:"220vh"}, left:"90vw"}}>Bubble text 1</Box>
-    <Box id="bubbleText1Disappear" sx={{position:"absolute", top:{xs:"270vh",sm:"270vh"}, left:"90vw"}}>Bubble text 1</Box>
+    <Box id="bubbleText1Disappear" sx={{position:"absolute", top:{xs:"300vh",sm:"300vh"}, left:"90vw"}}>Bubble text 1</Box>
 
 
 
-    <Grid item xs={10} sm={5} id="bubbleText1"
+    <Grid item xs={11} sm={5} id="bubbleText1"
       sx={{ 
         position:{xs:"fixed", sm:"relative"},
         top:{xs:"60vh"},
@@ -137,12 +139,17 @@ export default function What() {
         opacity:{xs:"0%", sm:"100%"}
       }}>
 
-      <Typography textAlign="center" 
-        sx={{ fontSize: { xs: 40, md: 70 }, 
-      }}
-        component="div"
-      >
-          Nature's way of measuring chemicals.
+      <Typography textAlign="center" component="div" 
+        sx={{ fontSize: { xs: 35, md: 70 }, 
+      }} >
+          It all starts in a cell.
+      </Typography>
+      <Typography textAlign="center" component="div"
+        sx={{ 
+          fontSize: { xs: 20, md: 40 }, 
+          mt:"10px"
+        }} >
+          Genetic sensors "road-block" production of a green fluorescent protein (GFP)
       </Typography>
 
       </Grid>
