@@ -3,16 +3,12 @@ import React from 'react';
 import Box from '@mui/material/Box';
 
 import Home from './Components/Home';
-import What from './Components/What';
-import Why from './Components/Why';
-import Who from './Components/Who';
-import Do from './Components/Do';
-import Contact from './Components/Contact';
-
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     
+
   <Box
     display="grid"
     gridTemplateColumns="repeat(12, 1fr)"
@@ -21,12 +17,11 @@ function App() {
   >
     <Box gridColumn="span 12">
 
-      <Home/>
-      <What/>
-      <Why/>
-      <Who/>
-      <Do/>
-      <Contact/>
+    <Routes>
+      
+          <Route path="/*" element={<Home />} />
+
+    </Routes>
 
     </Box>
   </Box>

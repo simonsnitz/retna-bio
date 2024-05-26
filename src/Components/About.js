@@ -5,8 +5,7 @@ import { Grid, Typography, Box } from '@mui/material/';
 import sensor from './sensorStructure.png';
 
 
-
-const Contact = forwardRef(function Contact(props, ref) {
+const About = forwardRef(function About(props, ref) {
 
 
   return (
@@ -16,7 +15,7 @@ const Contact = forwardRef(function Contact(props, ref) {
       props={props}
       ref={ref}
       container
-      sx={{height: '100vh'}}
+      sx={{height: "100vh", border: "1px solid black"}}
       spacing={0}
       columns={12}
       justifyContent="center"
@@ -43,17 +42,18 @@ const Contact = forwardRef(function Contact(props, ref) {
         {/* Header */}
       <Typography
         sx={{ fontSize: { xs: 20, md: 48 }, mt: 30 }} component="div">
-        Contact
+        Retna Bio
       </Typography>
       <Typography
         sx={{ fontSize: { xs: 14, md: 30 } }} component="div">
-        'list of our services'
+        Synthetic Biology Consulting
       </Typography>
 
         {/* Description */}
       <Typography
-        sx={{ fontSize: { xs: 14, md: 24 }, mt: 15 }} component="div">
-        We provide advice on strategy and genetic design 
+        sx={{ fontSize: { xs: 14, md: 22 }, mt: 15 }} component="div">
+        Retna Bio is a synthetic biology consulting company managed and operated by 
+        Simon d'Oelsnitz, a Synthetic Biology Fellow at Harvard Medical School. 
       </Typography>
 
       </Grid>
@@ -68,4 +68,4 @@ const Contact = forwardRef(function Contact(props, ref) {
   );
 });
 
-export default Contact;
+export default About;

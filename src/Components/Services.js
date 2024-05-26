@@ -6,7 +6,7 @@ import sensor from './sensorStructure.png';
 
 
 
-const Contact = forwardRef(function Contact(props, ref) {
+const Services = forwardRef(function Services(props, ref) {
 
 
   return (
@@ -15,8 +15,8 @@ const Contact = forwardRef(function Contact(props, ref) {
     <Grid
       props={props}
       ref={ref}
-      container
       sx={{height: '100vh'}}
+      container
       spacing={0}
       columns={12}
       justifyContent="center"
@@ -43,7 +43,7 @@ const Contact = forwardRef(function Contact(props, ref) {
         {/* Header */}
       <Typography
         sx={{ fontSize: { xs: 20, md: 48 }, mt: 30 }} component="div">
-        Contact
+        Services
       </Typography>
       <Typography
         sx={{ fontSize: { xs: 14, md: 30 } }} component="div">
@@ -68,4 +68,4 @@ const Contact = forwardRef(function Contact(props, ref) {
   );
 });
 
-export default Contact;
+export default Services;
