@@ -42,18 +42,20 @@ const About = forwardRef(function About(props, ref) {
         {/* Header */}
       <Typography
         sx={{ fontSize: { xs: 20, md: 48 }, mt: 30 }} component="div">
-        Retna Bio
-      </Typography>
-      <Typography
-        sx={{ fontSize: { xs: 14, md: 30 } }} component="div">
-        Synthetic Biology Consulting
+        -- Retna Bio Logo --
       </Typography>
 
         {/* Description */}
       <Typography
-        sx={{ fontSize: { xs: 14, md: 22 }, mt: 15 }} component="div">
-        Retna Bio is a synthetic biology consulting company managed and operated by 
-        Simon d'Oelsnitz, a Synthetic Biology Fellow at Harvard Medical School. 
+        sx={{ fontSize: { xs: 14, md: 22 }, mt: 10 }} component="div">
+        Retna Bio is a synthetic biology consulting firm managed and operated by 
+        <a href="https://scholar.google.com/citations?hl=en&user=4lfhK5wAAAAJ" style={{textDecoration: "None", color: "#1971ff"}}
+        target="_blank" rel="noopener noreferrer"> Simon d'Oelsnitz</a>
+        , a Synthetic Biology Fellow at Harvard Medical School. 
+        We specialize in the design and application of <b>chemical-responsive 
+        genetic circuits</b> in microbial hosts.
+        Our mission is to help bridge the gap between academic-led innovation and 
+        industry-led impact.
       </Typography>
 
       </Grid>
