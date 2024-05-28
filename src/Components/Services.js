@@ -39,54 +39,54 @@ const Services = forwardRef(function Services(props, ref) {
     </Grid>
 
 
-    {/* Strategy section */}
+    {/* Feasibility section */}
     <Grid container columns={12}>
 
     <Grid item xs={2}>{/* Spacer */}</Grid>
-      <Grid item xs={10}>
+      <Grid item xs={8}>
         <Typography
-          sx={{ fontSize: { xs: 24, md: 36 }, mt: 10 }} component="div">
-          Project strategy
-        </Typography>
-      </Grid>
-
-      <Grid item xs={2}>{/* Spacer */}</Grid>
-      <Grid item xs={4}>
-        <Typography  sx={{ fontSize: { xs: 24, md: 36 }, mt: 10 }} style={{border: "1px solid black"}} component="div" textAlign="center">
-          Gene identification
-        </Typography>
-      </Grid>
-      <Grid item xs={4}>
-        <Typography  sx={{ fontSize: { xs: 24, md: 36 }, mt: 10 }} component="div" textAlign="center">
+          sx={{ fontSize: { xs: 24, md: 36 }, mt: 10 }} component="div" textAlign="center">
           Feasibility assessment
         </Typography>
       </Grid>
-      <Grid item xs={2}>{/* Spacer */}</Grid>
+
+        {/* Feasibility Content */}
+      <Grid container columns={12}>
+        <Grid item xs={2}> 
+            {/* Spacer  */}
+        </Grid>
+      <Grid item xs={4} style={{border: "1px solid black", height: 100}}>
+        {/* Image */}
+      </Grid>
+      <Grid item xs={4} style={{border: "1px solid black", height: 100}}>
+        {/* Text */}
+      </Grid>
+      </Grid>
 
 
-          {/* Genetic Design section */}
+    {/* Genetic Design section */}
     <Grid container columns={12}>
 
       <Grid item xs={2}>{/* Spacer */}</Grid>
-      <Grid item xs={10}>
+      <Grid item xs={8}>
         <Typography
-          sx={{ fontSize: { xs: 24, md: 36 }, mt: 10 }} component="div">
+          sx={{ fontSize: { xs: 24, md: 36 }, mt: 10 }} component="div" textAlign="center">
           Genetic Design
         </Typography>
       </Grid>
 
-      <Grid item xs={2}>{/* Spacer */}</Grid>
-      <Grid item xs={4}>
-        <Typography  sx={{ fontSize: { xs: 24, md: 36 }, mt: 10 }} style={{border: "1px solid black"}} component="div" textAlign="center">
-          Component design
-        </Typography>
+        {/* Genetic Design Content */}
+        <Grid container columns={12}>
+        <Grid item xs={2}> 
+            {/* Spacer  */}
+        </Grid>
+      <Grid item xs={4} style={{border: "1px solid black", height: 100}}>
+        {/* Image */}
       </Grid>
-      <Grid item xs={4}>
-        <Typography  sx={{ fontSize: { xs: 24, md: 36 }, mt: 10 }} component="div" textAlign="center">
-          Circuit design
-        </Typography>
+      <Grid item xs={4} style={{border: "1px solid black", height: 100}}>
+        {/* Text */}
       </Grid>
-      <Grid item xs={2}>{/* Spacer */}</Grid>
+      </Grid>
 
     </Grid>
 

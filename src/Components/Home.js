@@ -50,8 +50,8 @@ export default function Home() {
       style={{width: '100vw', height: 70, position: 'fixed', top: 0, borderBottom: "1px solid black"}}>
 
       <Grid item xs={2}>.</Grid>
-      <Grid item xs={4} textAlign="left">
-        <Typography onClick={() => handleClick("home")} mt={3} sx={{fontWeight: 400, fontSize: 20 }}>Logo</Typography>
+      <Grid item xs={4} style={{display: 'flex', alignItems: "center"}}>
+        <img onClick={() => handleClick("home")} src="retna_logo.png" style={{height: 50}}/>
       </Grid>
       <Grid item xs={2} textAlign="center">
         <Typography onClick={() => handleClick("services")} mt={3} sx={{fontWeight: 400, fontSize: 20 }}>Services</Typography>

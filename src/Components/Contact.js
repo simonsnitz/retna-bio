@@ -47,13 +47,13 @@ const Contact = forwardRef(function Contact(props, ref) {
       </Typography>
       <Typography
         sx={{ fontSize: { xs: 14, md: 30 } }} component="div">
-        'list of our services'
+        Reach out for references and to learn more about our services.
       </Typography>
 
         {/* Description */}
       <Typography
         sx={{ fontSize: { xs: 14, md: 24 }, mt: 15 }} component="div">
-        We provide advice on strategy and genetic design 
+        contact info
       </Typography>
 
       </Grid>

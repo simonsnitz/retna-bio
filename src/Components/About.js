@@ -37,13 +37,8 @@ const About = forwardRef(function About(props, ref) {
 
     <Grid item xs={2} >
     </Grid>
-    <Grid item xs={4} >
+    <Grid item xs={4} mt={20}>
 
-        {/* Header */}
-      <Typography
-        sx={{ fontSize: { xs: 20, md: 48 }, mt: 30 }} component="div">
-        -- Retna Bio Logo --
-      </Typography>
 
         {/* Description */}
       <Typography
