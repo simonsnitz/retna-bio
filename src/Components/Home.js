@@ -59,14 +59,23 @@ export default function Home() {
       <Grid item xs={2} textAlign="center">
         <Typography onClick={() => handleClick("contact")} mt={3} sx={{fontWeight: 400, fontSize: 20 }}>Contact</Typography>
       </Grid>
-
     </Grid>
 
-    {/* <NavBar/> */}
-    {/* <div ref={home}><About/></div> */}
+
+
+      {/* Main content */}
     <About ref={home}/>
     <Services ref={services}/>
     <Contact ref={contact}/>
+
+
+      {/* Footer */}
+    <Grid item xs={12} style={{backgroundColor: "#333333", height: 100}} textAlign="center" justifyContent={"center"}>
+      <Typography sx={{fontWeight: 400, fontSize: 14, color: "#c4c4c4", marginTop: 5}} >
+        Retna Bio LLC - &copy; 2024. All Rights Reserved.
+      </Typography>
+    </Grid>
+
 
     </Grid>
 
