@@ -1,9 +1,6 @@
 import React, {forwardRef} from "react";
 
-import { Grid, Typography, Box } from '@mui/material/';
-
-import sensor from './sensorStructure.png';
-
+import { Grid, Typography } from '@mui/material/';
 
 
 const Services = forwardRef(function Services(props, ref) {
@@ -64,8 +61,11 @@ const Services = forwardRef(function Services(props, ref) {
         </Grid>
 
         <Grid item xs={12} >
-          <Typography sx={{ fontSize: { xs: 12, md: 20 }}}  component="div" color="white" padding={7}>
-            Content
+          <Typography sx={{ fontSize: { xs: 12, md: 20 }}}  component="div" color="#ededed" padding={7}>
+          A combination of literature analysis and bioinformatic prediction tools are used to assess
+          the feasibility of building genetic sensors for your target molecule in your target organism.
+          The resulting feasibility report can be used to guide important decisions for future strain 
+          and enzyme engineering projects.
         </Typography>
         </Grid>
         
@@ -90,8 +90,10 @@ const Services = forwardRef(function Services(props, ref) {
         </Grid>
 
         <Grid item xs={12} >
-        <Typography sx={{ fontSize: { xs: 12, md: 20 }}}  component="div" padding={7} color="white">
-          Content
+        <Typography sx={{ fontSize: { xs: 12, md: 20 }}}  component="div" padding={7} color="#ededed">
+          Host constraints and genetic element availability are used guide biosensor circuit designs that
+          fit the target application. Detailed protocols are created for evaluating biosensor designs.
+          The resulting genetic sequences and protocols provide a clear actionable plan for sensor development.
         </Typography>
         </Grid>
         
@@ -103,29 +105,6 @@ const Services = forwardRef(function Services(props, ref) {
     <Grid item xs={2} >
       {/* Spacer */}
     </Grid>
-
-
-
-      {/* <Grid item xs={4}>
-        <Typography
-          sx={{ fontSize: { xs: 24, md: 36 }, mt: 10 }} component="div" textAlign="center">
-          Feasibility analysis
-        </Typography>
-      </Grid> */}
-
-
-
-
-      {/* <Grid item xs={4} style={{border: "1px solid black", height: 100}}> */}
-        {/* Image */}
-      {/* </Grid> */}
-
-
-
-
-
-
-
 
 
     </Grid>
