@@ -5,7 +5,7 @@ import { Grid, Typography, Box, Button } from '@mui/material/';
 import sensor from './sensorStructure.png';
 import SendIcon from '@mui/icons-material/Send';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { useTheme, styled } from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 import { keyframes } from '@mui/system';
 
 
@@ -53,6 +53,7 @@ const enterStructure = keyframes`
       <Box
         component="img"
         id="picture"
+        alt="Biosensor Structure image"
           sx={{
             width: { xs: "180vw", sm: "140vw", md: "80vw" },
             right: 0,
