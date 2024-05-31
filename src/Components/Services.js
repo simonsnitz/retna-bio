@@ -36,7 +36,7 @@ const Services = forwardRef(function Services(props, ref) {
 
 
       {/* Feasibility section */}
-      <Grid item xs={12} sm={6} md={6} sx={{padding: {xs:3, sm:5, md:15}} }>
+      <Grid item xs={12} sm={6} md={6} sx={{padding: {xs:3, sm:5, md:15}}}>
         <Grid container  >
             {/* Header */}
           <Grid item xs={12} textAlign="center">
@@ -64,7 +64,7 @@ const Services = forwardRef(function Services(props, ref) {
 
 
       {/* Genetic Design section */}
-      <Grid item xs={12} sm={6} md={6} sx={{padding: {xs:3, sm:5, md:15}}}>
+      <Grid item xs={12} sm={6} md={6} sx={{padding: {xs:3, sm:5, md:15} } }>
         <Grid container  >
               {/* Header */}
             <Grid item xs={12} textAlign="center" sx={{mt:{xs:7, sm:0}}}>

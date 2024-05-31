@@ -52,13 +52,13 @@ export default function Home() {
 
       <Grid item xs={0} sm={2}></Grid>
       <Grid item xs={4} sx={{ height: {xs:30, sm: 50}, ml: {xs:2, sm:0} }}>
-        <img onClick={() => handleClick("home")} src="retna_logo.png" style={{height: '100%'}}/>
+        <img onClick={() => handleClick("home")} src="retna_logo.png" style={{height: '100%', cursor: 'pointer'}}/>
       </Grid>
-      <Grid item xs={4} sm={2} sx={{textAlign:"center"}}>
-        <Typography onClick={() => handleClick("services")} sx={{fontWeight: 400, fontSize: {xs:14, sm:22} }}>Services</Typography>
+      <Grid item xs={4} sm={2} sx={{textAlign:"center"}} >
+        <Typography onClick={() => handleClick("services")} sx={{fontWeight: 400, fontSize: {xs:14, sm:22} }} style={{ cursor: 'pointer' }} >Services</Typography>
       </Grid>
       <Grid item xs={3} sm={2} sx={{textAlign: "center"}}>
-        <Typography onClick={() => handleClick("contact")} sx={{fontWeight: 400, fontSize: {xs:14, sm:22} }}>Contact</Typography>
+        <Typography onClick={() => handleClick("contact")} sx={{fontWeight: 400, fontSize: {xs:14, sm:22} }} style={{ cursor: 'pointer' }}>Contact</Typography>
       </Grid>
     </Grid>
 
