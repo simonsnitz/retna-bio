@@ -3,10 +3,16 @@ import React, {forwardRef} from "react";
 import { Grid, Typography, Box, Button } from '@mui/material/';
 
 import sensor from './sensorStructure.png';
-
+import SendIcon from '@mui/icons-material/Send';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
 
 const About = forwardRef(function About(props, ref) {
-
+const theme = useTheme();
+const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+const buttonProps = {
+  size: isSmallScreen ? "small" : "medium"
+};
 
   return (
     
@@ -26,27 +32,27 @@ const About = forwardRef(function About(props, ref) {
         component="img"
         id="picture"
           sx={{
-            width: { xs: "150vw", sm: "80vw" },
+            width: { xs: "180vw", sm: "80vw" },
             right: 0,
-            top: { xs:"35vh", sm:0},
+            top: { xs:"45vh", sm:0},
             position: "absolute",
           }}
           style={{opacity: "20%", zIndex:-10}}
           src={sensor}
       />
 
-    <Grid item xs={2} >
+    <Grid item xs={1} sm={2} >
     </Grid>
-    <Grid item xs={4} mt={20}>
+    <Grid item xs={10} sm={4} sx={{mt:{xs:10, sm:20}}} >
 
     <Typography
-        sx={{ fontSize: { xs: 14, md: 40 }, mt: 10 }} component="div" fontFamily="Argent">
+        sx={{ fontSize: { xs: 24, md: 40 }, mt:8 }} component="div" fontFamily="Argent">
           Synthetic Biology Consulting
     </Typography>
 
         {/* Description */}
       <Typography
-        sx={{ fontSize: { xs: 14, md: 22 }, mt: 10 }} component="div" >
+        sx={{ fontSize: { xs: 14, md: 22 }, mt: {xs:3, sm:10} }} component="div" >
         Retna Bio is a consulting firm managed and operated by 
         <a href="https://scholar.google.com/citations?hl=en&user=4lfhK5wAAAAJ" style={{textDecoration: "None", color: "#1971ff"}}
         target="_blank" rel="noopener noreferrer"> Simon d'Oelsnitz</a>
@@ -59,6 +65,8 @@ const About = forwardRef(function About(props, ref) {
 
       <Button 
         variant="contained"
+        {...buttonProps}
+        endIcon={<SendIcon />}
         style={{marginTop: 35}}
         >
         <a href="mailto:simon@retna.bio" style={{textDecoration: "None", color: "white"}}
