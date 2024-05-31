@@ -17,6 +17,7 @@ const Contact = forwardRef(function Contact(props, ref) {
       props={props}
       ref={ref}
       container
+      sx={{height: {xs:250, sm:300, md:400}}}
       spacing={0}
       columns={12}
       mb={20}
@@ -30,11 +31,11 @@ const Contact = forwardRef(function Contact(props, ref) {
 
         {/* Header */}
       <Typography
-        sx={{ fontSize: { xs: 20, md: 40 }, mt: 15 }} component="div" fontFamily="Argent">
+        sx={{ fontSize: { xs: 24, sm: 34, md: 40  }, mt: {xs:5, sm:10, md:15} }} component="div" fontFamily="Argent">
         Contact
       </Typography>
       <Typography
-        sx={{ fontSize: { xs: 14, md: 22 } }} mt={5} mb={5} component="div">
+        sx={{ fontSize: { xs: 14, sm:18, md: 22 } }} mt={5} mb={5} component="div">
         Please reach out by email for references and to learn more about our services.
       </Typography>
 
@@ -48,7 +49,7 @@ const Contact = forwardRef(function Contact(props, ref) {
       </Typography>
       </Grid>
 
-      <Grid container justifyContent={"center"} mt={10}>
+      <Grid container justifyContent={"center"} mt={8}>
         
         {/* Social media logos */}
         <Link

@@ -25,7 +25,7 @@ const Services = forwardRef(function Services(props, ref) {
         {/* Topic Header */}
     <Grid item xs={12} >
       <Typography
-        sx={{ fontSize: { xs: 24, sm: 34, md: 40 }, mt: {xs:5, sm:10} }} color={"white"} component="div" textAlign="center" fontFamily="Argent">
+        sx={{ fontSize: { xs: 24, sm: 34, md: 40 }, mt: {xs:5, sm:10, md:15} }} color={"white"} component="div" textAlign="center" fontFamily="Argent">
         Services
       </Typography>
     </Grid>
