@@ -21,7 +21,7 @@ const buttonProps = {
       props={props}
       ref={ref}
       container
-      sx={{height: "100vh", border: "1px solid black"}}
+      sx={{height: {xs:700, sm:850, md:1000}, border: "1px solid black"}}
       spacing={0}
       columns={12}
       justifyContent="center"
@@ -32,27 +32,27 @@ const buttonProps = {
         component="img"
         id="picture"
           sx={{
-            width: { xs: "180vw", sm: "80vw" },
+            width: { xs: "180vw", sm: "140vw", md: "80vw" },
             right: 0,
-            top: { xs:"45vh", sm:0},
+            top: { xs:"45vh", sm:"35vh", md:0},
             position: "absolute",
           }}
           style={{opacity: "20%", zIndex:-10}}
           src={sensor}
       />
 
-    <Grid item xs={1} sm={2} >
+    <Grid item xs={1} md={2} >
     </Grid>
-    <Grid item xs={10} sm={4} sx={{mt:{xs:10, sm:20}}} >
+    <Grid item xs={9} md={4} sx={{mt:{xs:10, sm:15, md: 20}}} >
 
     <Typography
-        sx={{ fontSize: { xs: 24, md: 40 }, mt:8 }} component="div" fontFamily="Argent">
+        sx={{ fontSize: { xs: 24, sm: 34, md: 40 }, mt:8 }} component="div" fontFamily="Argent">
           Synthetic Biology Consulting
     </Typography>
 
         {/* Description */}
       <Typography
-        sx={{ fontSize: { xs: 14, md: 22 }, mt: {xs:3, sm:10} }} component="div" >
+        sx={{ fontSize: { xs: 14, sm:18, md: 22 }, mt: {xs:3, sm:5, md:10} }} component="div" >
         Retna Bio is a consulting firm managed and operated by 
         <a href="https://scholar.google.com/citations?hl=en&user=4lfhK5wAAAAJ" style={{textDecoration: "None", color: "#1971ff"}}
         target="_blank" rel="noopener noreferrer"> Simon d'Oelsnitz</a>
