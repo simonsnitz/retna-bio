@@ -30,11 +30,11 @@ const Contact = forwardRef(function Contact(props, ref) {
 
         {/* Header */}
       <Typography
-        sx={{ fontSize: { xs: 20, md: 36 }, mt: 15 }} component="div" >
+        sx={{ fontSize: { xs: 20, md: 40 }, mt: 15 }} component="div" fontFamily="Argent">
         Contact
       </Typography>
       <Typography
-        sx={{ fontSize: { xs: 14, md: 22 } }} mt={2} mb={5} component="div">
+        sx={{ fontSize: { xs: 14, md: 22 } }} mt={5} mb={5} component="div">
         Please reach out by email for references and to learn more about our services.
       </Typography>
 
@@ -49,6 +49,7 @@ const Contact = forwardRef(function Contact(props, ref) {
       </Grid>
 
       <Grid container justifyContent={"center"} mt={10}>
+        
         {/* Social media logos */}
         <Link
           href="https://www.linkedin.com/company/retnabio/"

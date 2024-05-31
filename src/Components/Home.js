@@ -47,13 +47,13 @@ export default function Home() {
     {/* Navigation Bar */}
     <Grid container 
       sx={{backgroundColor: "white"}}
-      style={{width: '100vw', height: 70, position: 'fixed', top: 0, borderBottom: "1px solid black"}}>
+      style={{width: '100vw', height: 70, position: 'fixed', top: 0, borderBottom: "1px solid black", zIndex:5}}>
 
       <Grid item xs={2}>.</Grid>
       <Grid item xs={4} style={{display: 'flex', alignItems: "center"}}>
         <img onClick={() => handleClick("home")} src="retna_logo.png" style={{height: 50}}/>
       </Grid>
-      <Grid item xs={2} textAlign="center">
+      <Grid item xs={2} textAlign="right">
         <Typography onClick={() => handleClick("services")} mt={3} sx={{fontWeight: 400, fontSize: 20 }}>Services</Typography>
       </Grid>
       <Grid item xs={2} textAlign="center">

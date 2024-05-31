@@ -40,13 +40,13 @@ const About = forwardRef(function About(props, ref) {
     <Grid item xs={4} mt={20}>
 
     <Typography
-        sx={{ fontSize: { xs: 14, md: 36 }, mt: 10 }} component="div">
+        sx={{ fontSize: { xs: 14, md: 40 }, mt: 10 }} component="div" fontFamily="Argent">
           Synthetic Biology Consulting
     </Typography>
 
         {/* Description */}
       <Typography
-        sx={{ fontSize: { xs: 14, md: 22 }, mt: 10 }} component="div">
+        sx={{ fontSize: { xs: 14, md: 22 }, mt: 10 }} component="div" >
         Retna Bio is a consulting firm managed and operated by 
         <a href="https://scholar.google.com/citations?hl=en&user=4lfhK5wAAAAJ" style={{textDecoration: "None", color: "#1971ff"}}
         target="_blank" rel="noopener noreferrer"> Simon d'Oelsnitz</a>
@@ -66,10 +66,6 @@ const About = forwardRef(function About(props, ref) {
           
       </Button>
 
-      {/* <Typography
-        sx={{ fontSize: { xs: 14, md: 22 }, mt: 7 }} component="div" style={{border: "1px solid black", width: 200}}>
-          Get in touch
-      </Typography> */}
 
       </Grid>
 

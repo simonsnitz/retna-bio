@@ -27,7 +27,7 @@ const Services = forwardRef(function Services(props, ref) {
         {/* Topic Header */}
     <Grid item xs={8} >
       <Typography
-        sx={{ fontSize: { xs: 20, md: 36 }, mt: 10 }} color={"white"} component="div" textAlign="center">
+        sx={{ fontSize: { xs: 20, md: 40 }, mt: 10 }} color={"white"} component="div" textAlign="center" fontFamily="Argent">
         Services
       </Typography>
     </Grid>
@@ -55,9 +55,7 @@ const Services = forwardRef(function Services(props, ref) {
         </Grid>
 
         <Grid item xs={12} textAlign="center">
-          <Typography sx={{ fontSize: { xs: 16, md: 30 }}}  component="div" style={{border: "1px solid black"}}>
-          Image
-        </Typography>
+            <img src="feasibility_analysis.png" style={{width: 500}}/>
         </Grid>
 
         <Grid item xs={12} >
@@ -84,14 +82,12 @@ const Services = forwardRef(function Services(props, ref) {
         </Grid>
 
         <Grid item xs={12} textAlign="center">
-          <Typography sx={{ fontSize: { xs: 16, md: 30 }}}  component="div" style={{border: "1px solid black"}}>
-          Image
-        </Typography>
+            <img src="genetic_design.png" style={{width: 500}}/>
         </Grid>
 
         <Grid item xs={12} >
         <Typography sx={{ fontSize: { xs: 12, md: 20 }}}  component="div" padding={7} color="#ededed">
-          Host constraints and genetic element availability are used guide biosensor circuit designs that
+          Host constraints and genetic element availability are used to guide biosensor circuit designs that
           fit the target application. Detailed protocols are created for evaluating biosensor designs.
           The resulting genetic sequences and protocols provide a clear actionable plan for sensor development.
         </Typography>
