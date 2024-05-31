@@ -46,18 +46,19 @@ export default function Home() {
 
     {/* Navigation Bar */}
     <Grid container 
+      columns={12}
       sx={{backgroundColor: "white"}}
-      style={{width: '100vw', height: 70, position: 'fixed', top: 0, borderBottom: "1px solid black", zIndex:5}}>
+      style={{width: '100vw', height: 70, position: 'fixed', top: 0, borderBottom: "1px solid black", zIndex:5, display: 'flex', alignItems: "center",}}>
 
-      <Grid item xs={2}>.</Grid>
-      <Grid item xs={4} style={{display: 'flex', alignItems: "center"}}>
-        <img onClick={() => handleClick("home")} src="retna_logo.png" style={{height: 50}}/>
+      <Grid item xs={0} sm={2}></Grid>
+      <Grid item xs={4} sx={{ height: {xs:30, sm: 50}, ml: {xs:2, sm:0} }}>
+        <img onClick={() => handleClick("home")} src="retna_logo.png" style={{height: '100%'}}/>
       </Grid>
-      <Grid item xs={2} textAlign="right">
-        <Typography onClick={() => handleClick("services")} mt={3} sx={{fontWeight: 400, fontSize: 20 }}>Services</Typography>
+      <Grid item xs={4} sm={2} sx={{textAlign:"center"}}>
+        <Typography onClick={() => handleClick("services")} sx={{fontWeight: 400, fontSize: {xs:14, sm:22} }}>Services</Typography>
       </Grid>
-      <Grid item xs={2} textAlign="center">
-        <Typography onClick={() => handleClick("contact")} mt={3} sx={{fontWeight: 400, fontSize: 20 }}>Contact</Typography>
+      <Grid item xs={3} sm={2} sx={{textAlign: "center"}}>
+        <Typography onClick={() => handleClick("contact")} sx={{fontWeight: 400, fontSize: {xs:14, sm:22} }}>Contact</Typography>
       </Grid>
     </Grid>
 

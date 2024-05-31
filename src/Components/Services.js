@@ -54,8 +54,8 @@ const Services = forwardRef(function Services(props, ref) {
         </Typography>
         </Grid>
 
-        <Grid item xs={12} textAlign="center">
-            <img src="feasibility_analysis.png" style={{width: 500}}/>
+        <Grid item xs={12} textAlign="center" sx={{width:{xs:200, sm:500 }}}>
+            <img src="feasibility_analysis.png" style={{width: "100%"}}/>
         </Grid>
 
         <Grid item xs={12} >
@@ -81,8 +81,8 @@ const Services = forwardRef(function Services(props, ref) {
         </Typography>
         </Grid>
 
-        <Grid item xs={12} textAlign="center">
-            <img src="genetic_design.png" style={{width: 500}}/>
+        <Grid item xs={12} textAlign="center" sx={{width:{xs:200, sm:500 }}}>
+            <img src="genetic_design.png" style={{width: "100%"}}/>
         </Grid>
 
         <Grid item xs={12} >
