@@ -1,88 +1,86 @@
-import React, { useEffect } from 'react';
 
-import { Grid, Typography, Box } from '@mui/material/';
-import BeadsAnimation from './BeadsAnimation';
+import { Grid, Typography } from '@mui/material/';
+import React from 'react';
 
-import sensor from './sensorStructure.png';
+// Components
+import About from './About.js';
+import Services from './Services.js';
+import Contact from './Contact.js';
 
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+import {useRef} from 'react';
 
 
 export default function Home() {
 
-  gsap.registerPlugin(ScrollTrigger);
+
+  const home = useRef(null);
+  const services = useRef(null);
+  const contact = useRef(null);
+
+
+  const handleClick = (element) => {
+    if (element === "home") {
+      home.current?.scrollIntoView({behavior: 'smooth'});
+    }
+    else if (element === "services") {
+      services.current?.scrollIntoView({behavior: 'smooth'});
+    }
+    else if (element === "contact") {
+      contact.current?.scrollIntoView({behavior: 'smooth'});
+    };
+  };
 
 
 
-  useEffect(() => {
+    return (
 
-    gsap.fromTo("#geneticSensors", 
-      {opacity:"100%"},
-      {opacity:"0%", 
-        scrollTrigger: {
-          trigger: "#geneticSensorFadeMarker",
-          scrub: true,
-          start:"top center",
-        }
-      },
-      )
-
-  
-  }, []);
-
-
-  return (
-    
+      //Parent container
     <Grid
-      container
-      spacing={0}
-      columns={12}
-      justifyContent="center"
-      sx={{ height: '150vh', overflow:'hidden', background: "linear-gradient(to top, #4521fc, #bac1ff)" }}
-    >
-      <Box
-        component="img"
-        id="picture"
-          sx={{
-            width: { xs: "150vw", sm: "80vw" },
-            right: 0,
-            top: { xs:"35vh", sm:0},
-            position: "absolute",
-          }}
-          style={{opacity: "20%"}}
-          src={sensor}
-      />
-
-    <Box id="geneticSensorFadeMarker" sx={{position: "absolute", top:"60vh"}}></Box>
-
-
-    <Grid item xs={11} sx={{mt:{xs:'10vh', sm:'20vh'}}} >
-      <Typography textAlign="center"
-        sx={{ fontSize: { xs: 35, md: 70 }, mt: '5%' }}
-        component="div"
+        container
+        spacing={0}
+        alignItems="center"
+        width= '100vw'
+        justifyContent="center"
       >
-        We accelerate screening workflows by leveraging
+
+    {/* Navigation Bar */}
+    <Grid container 
+      columns={12}
+      sx={{backgroundColor: "white"}}
+      style={{width: '100vw', height: 70, position: 'fixed', top: 0, borderBottom: "1px solid black", zIndex:5, display: 'flex', alignItems: "center",}}>
+
+      <Grid item xs={0} sm={2}></Grid>
+      <Grid item xs={4} sx={{ height: {xs:30, sm: 50}, ml: {xs:2, sm:0} }}>
+        <img onClick={() => handleClick("home")} src="retna_logo.png" style={{height: '100%', cursor: 'pointer'}}/>
+      </Grid>
+      <Grid item xs={4} sm={2} sx={{textAlign:"center"}} >
+        <Typography onClick={() => handleClick("services")} sx={{fontWeight: 400, fontSize: {xs:14, sm:22} }} style={{ cursor: 'pointer' }} >Services</Typography>
+      </Grid>
+      <Grid item xs={3} sm={2} sx={{textAlign: "center"}}>
+        <Typography onClick={() => handleClick("contact")} sx={{fontWeight: 400, fontSize: {xs:14, sm:22} }} style={{ cursor: 'pointer' }}>Contact</Typography>
+      </Grid>
+    </Grid>
+
+
+
+      {/* Main content */}
+    <About ref={home}/>
+    <Services ref={services}/>
+    <Contact ref={contact}/>
+
+
+      {/* Footer */}
+    <Grid item xs={12} style={{backgroundColor: "#333333", height: 100}} textAlign="center" justifyContent={"center"}>
+      <Typography sx={{fontWeight: 400, fontSize: 14, color: "#c4c4c4", marginTop: 5}} >
+        Retna Bio LLC - &copy; 2024. All Rights Reserved.
       </Typography>
-      <Typography id="geneticSensors" textAlign="center"
-        sx={{ fontSize: { xs: 35, md: 70 }, position:"fixed", left:"50%", translate:"-50%" }}
-        component="div">
-      genetic sensors
-      </Typography>
+    </Grid>
 
-      </Grid>
-
-
-      <Grid item xs={10} sx={{mt:{xs:80, sm:50}}}>
-        <BeadsAnimation speed={10} delay={1} name={"slow_beads"}/>
-      </Grid>
-      <Grid item xs={10} sx={{mt:{xs:0, sm:-5}}}>
-        <BeadsAnimation speed={2} delay={0.2} name={"fast_beads"}/>
-      </Grid>
 
     </Grid>
-    
-  );
-}
 
-;
+        
+
+    );
+}
