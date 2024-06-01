@@ -2,7 +2,6 @@ import React, {forwardRef} from "react";
 
 import { Grid, Typography, Box, Button } from '@mui/material/';
 
-import sensor from './sensorStructure.png';
 import SendIcon from '@mui/icons-material/Send';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
@@ -62,7 +61,7 @@ const enterStructure = keyframes`
             animation: `${enterStructure} 1s ease`,
           }}
           style={{opacity: '20%', zIndex:-10}}
-          src={sensor}
+          src="sensorStructure.png"
       />
 
     <Grid item xs={1} md={2} >
