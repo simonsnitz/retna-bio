@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/retna-bio/static/css/main.1a376471.css",
-    "main.js": "/retna-bio/static/js/main.f8654514.js",
+    "main.js": "/retna-bio/static/js/main.8a34f350.js",
     "static/media/sensorStructure.png": "/retna-bio/static/media/sensorStructure.be39e523144649026fdc.png",
     "index.html": "/retna-bio/index.html",
     "main.1a376471.css.map": "/retna-bio/static/css/main.1a376471.css.map",
-    "main.f8654514.js.map": "/retna-bio/static/js/main.f8654514.js.map"
+    "main.8a34f350.js.map": "/retna-bio/static/js/main.8a34f350.js.map"
   },
   "entrypoints": [
     "static/css/main.1a376471.css",
-    "static/js/main.f8654514.js"
+    "static/js/main.8a34f350.js"
   ]
 }
