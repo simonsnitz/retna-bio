@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1a376471.css",
+    "main.js": "/static/js/main.16d2e3f0.js",
+    "static/media/sensorStructure.png": "/static/media/sensorStructure.be39e523144649026fdc.png",
+    "index.html": "/index.html",
+    "main.1a376471.css.map": "/static/css/main.1a376471.css.map",
+    "main.16d2e3f0.js.map": "/static/js/main.16d2e3f0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1a376471.css",
+    "static/js/main.16d2e3f0.js"
+  ]
+}
