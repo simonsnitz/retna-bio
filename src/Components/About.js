@@ -86,6 +86,8 @@ const enterStructure = keyframes`
         industry-led impact.
       </Typography>
 
+      <a href="mailto:simon@retna.bio" style={{textDecoration: "None", color: "white"}}
+          target="_blank" rel="noopener noreferrer">
       <Button 
         variant="contained"
         sx={{animation: `${enterWords} 1s ease`}}
@@ -93,10 +95,9 @@ const enterStructure = keyframes`
         endIcon={<SendIcon />}
         style={{marginTop: 35}}
         >
-        <a href="mailto:simon@retna.bio" style={{textDecoration: "None", color: "white"}}
-          target="_blank" rel="noopener noreferrer"> Get in touch</a>
-          
+        Get in touch
       </Button>
+      </a>
 
 
       </Grid>
